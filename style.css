@@ -7,6 +7,7 @@
 }
 body {
     min-height: 100vh;
+    background: url(1.png);
 }
 .container {
     display: flex;
@@ -19,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 4px #373737;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -32,6 +33,7 @@ body {
     min-height: 50px;
     justify-content: center;
     padding-left: 10px;
+    box-shadow: 0 0 2px #373737;
 }
 #title {
     color: white;
@@ -41,10 +43,11 @@ body {
 .fa-solid fa-cart-shopping fa-2xl {
     height: 40px;
     width: 40px;
-    box-shadow: 0 10px 10px black;
+    box-shadow: 0 10px 10px #373737;
 }
 .hero {
     margin-top: 50px;
+
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -60,6 +63,7 @@ body {
     align-items: center;
     font-size: 50px;
     border-radius: 10px;
+    box-shadow: 0 0 15px #373737;
 }
 .glide__slide,
 .glide__arrows {
