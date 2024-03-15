@@ -8,6 +8,11 @@
 body {
     min-height: 100vh;
     background: url(1.png);
+    display: flex;
+    overflow-x: hidden;
+}
+.wrapper {
+    display: flex;
 }
 .container {
     display: flex;
@@ -34,16 +39,11 @@ body {
     justify-content: center;
     padding-left: 10px;
     box-shadow: 0 0 2px #373737;
+    width: 100vw;
 }
 #title {
     color: white;
     font-size: 30px;
-}
-.fa-solid fa-bars fa-2xl,
-.fa-solid fa-cart-shopping fa-2xl {
-    height: 40px;
-    width: 40px;
-    box-shadow: 0 10px 10px #373737;
 }
 .hero {
     margin-top: 50px;
@@ -51,12 +51,13 @@ body {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
+    justify-content: center;
+    padding: 30px;
     gap: 30px;
 }
 .card {
-    height: 300px;
-    width: 300px;
+    height: 273px;
+    width: 273px;
     background-color: #3ba386;
     display: flex;
     justify-content: center;
@@ -64,13 +65,62 @@ body {
     font-size: 50px;
     border-radius: 10px;
     box-shadow: 0 0 15px #373737;
+    transition: transform 0.3s; /* Use transform for transition */
 }
-.glide__slide,
-.glide__arrows {
+.card:hover {
+    background-color: #48c7a3;
+    transform: scale(1.05); /* Scale the card on hover */
+    transition: 0.3s;
+}
+.sidebar {
+    opacity: 0;
+    position: absolute;
+    width: 0px;
+    height: 100vh;
+    background-color: #48c7a3;
+    z-index: 1;
+    box-shadow: 0 0 30px #373737;
+    pointer-events: none;
+    transition: 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.glide__arrows {
-    justify-content: space-between;
+.sidebar-active {
+    opacity: 100;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.barIcon-inactive {
+    display: none;
+}
+.cart {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    left: 82%;
+    bottom: 34%;
+    width: 300px;
+    height: 500px;
+    pointer-events: none;
+    transition: 0.3s;
+    background-color: #48c7a3;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-active {
+    opacity: 100;
+    transition: 0.3s;
+}
+
+#closeSidebar {
+    position: absolute;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 5px #373737);
+    top: 25px;
+    z-index: 3;
+    left: 18px;
 }
